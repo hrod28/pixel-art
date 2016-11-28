@@ -12,9 +12,9 @@ var drawCanvas = function() {
     canvas.appendChild(pixel);
   }
 
-  var projectName = document.createElement('h1');
-  projectName.textContent = 'Pixel Art Maker';
-  canvas.appendChild(projectName);
+  var artMaker = document.createElement('h1');
+  artMaker.textContent = 'Pixel Art Maker';
+  canvas.appendChild(artMaker);
 
   canvas.addEventListener('click', function(event) {
     if (event.target.className !== 'pixel') {
@@ -24,7 +24,7 @@ var drawCanvas = function() {
     event.target.style.background = brush;
     event.target.style.borderColor = brush;
   });
-}
+};
 
 var drawPalette = function() {
   var palette = document.querySelector('#palette');
@@ -80,7 +80,7 @@ var drawPalette = function() {
     brush = event.target.style.background;
     brushColor.style.background = brush;
   });
-}
+};
 
 drawCanvas();
 drawPalette();
